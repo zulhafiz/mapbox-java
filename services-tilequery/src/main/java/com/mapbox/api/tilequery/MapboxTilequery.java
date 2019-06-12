@@ -52,7 +52,7 @@ public abstract class MapboxTilequery extends MapboxService<FeatureCollection, T
   @Override
   protected Call<FeatureCollection> initializeCall() {
     return getService().getCall(
-      mapIds(),
+      tilesetIds(),
       query(),
       accessToken(),
       radius(),
@@ -69,7 +69,7 @@ public abstract class MapboxTilequery extends MapboxService<FeatureCollection, T
     }
 
     batchCall = getService().getBatchCall(
-      mapIds(),
+      tilesetIds(),
       query(),
       accessToken(),
       radius(),
@@ -145,7 +145,7 @@ public abstract class MapboxTilequery extends MapboxService<FeatureCollection, T
   abstract String accessToken();
 
   @NonNull
-  abstract String mapIds();
+  abstract String tilesetIds();
 
   @NonNull
   abstract String query();
@@ -201,11 +201,11 @@ public abstract class MapboxTilequery extends MapboxService<FeatureCollection, T
      * The ID of the map being queried. If you need to composite multiple layers, the Tilequery
      * API endpoint can also support a comma-separated list of map IDs.
      *
-     * @param mapIds Map ID(s)
+     * @param tilesetIds tile set ID(s)
      * @return this builder for chaining options together
      * @since 3.5.0
      */
-    public abstract Builder mapIds(String mapIds);
+    public abstract Builder tilesetIds(String tilesetIds);
 
     /**
      * The longitude and latitude to be queried.
