@@ -167,7 +167,7 @@ public abstract class MapboxTilequery extends MapboxService<FeatureCollection, T
 
   /**
    * This builder is used to create a new request to the Mapbox Tilequery API. At a bare minimum,
-   * your request must include an access token, a map ID, and a query of some kind. All other
+   * your request must include an access token, a tileset ID, and a query of some kind. All other
    * fields can be left alone in order to use the default behaviour of the API.
    * <p>
    * Note to contributors: All optional booleans in this builder use the object {@code Boolean}
@@ -198,8 +198,8 @@ public abstract class MapboxTilequery extends MapboxService<FeatureCollection, T
     public abstract Builder accessToken(@NonNull String accessToken);
 
     /**
-     * The ID of the map being queried. If you need to composite multiple layers, the Tilequery
-     * API endpoint can also support a comma-separated list of map IDs.
+     * The ID of the tileset being queried. If you need to composite multiple layers, the Tilequery
+     * API endpoint can also support a comma-separated list of tileset IDs.
      *
      * @param tilesetIds tile set ID(s)
      * @return this builder for chaining options together
