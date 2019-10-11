@@ -234,7 +234,8 @@ public abstract class MapboxGeocoding extends MapboxService<GeocodingResponse, G
    * your request must include an access token and a query of some kind. All other fields can
    * be left alone in order to use the default behaviour of the API.
    * <p>
-   * By default, the geocoding mode is set to mapbox.places. The mode can be changed to mapbox.places-permanent
+   * By default, the geocoding mode is set to mapbox.places.
+   * The mode can be changed to mapbox.places-permanent
    * to enable batch and permanent geocoding. For more information about
    * mapbox.places-permanent, contact <a href="https://www.mapbox.com/contact/sales/">Mapbox sales</a>.
    * </p><p>
@@ -285,7 +286,8 @@ public abstract class MapboxGeocoding extends MapboxService<GeocodingResponse, G
      * geocoding.
      * <p>
      * To access batch geocoding, contact <a href="https://www.mapbox.com/contact/sales/">Mapbox sales</a>.
-     * If you do not have access to batch geocoding, it will return an error code rather than a successful result.
+     * If you do not have access to batch geocoding, it will return
+     * an error code rather than a successful result.
      * </p><p>
      * Options avaliable to pass in include, {@link GeocodingCriteria#MODE_PLACES} for a ephemeral
      * geocoding result (default) or {@link GeocodingCriteria#MODE_PLACES_PERMANENT} for
