@@ -256,7 +256,7 @@ public abstract class MapboxGeocoding extends MapboxService<GeocodingResponse, G
      * Perform a reverse geocode on the provided {@link Point}. Only one point can be passed in as
      * the query and isn't guaranteed to return a result. If you
      * want to do a batch reverse Geocode, you can use the {@link #query(String)} method
-     * separating them with a semicolon. For more information about batch geocoding, * contact <a href="https://www.mapbox.com/contact/sales/">Mapbox sales</a>.
+     * separating them with a semicolon. For more information about batch geocoding, contact <a href="https://www.mapbox.com/contact/sales/">Mapbox sales</a>.
      *
      * @param point a GeoJSON point which matches to coordinate you'd like to reverse geocode
      * @return this builder for chaining options together
